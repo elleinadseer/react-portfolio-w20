@@ -47,7 +47,7 @@ function Form() {
   };
 
   return (
-    <div>
+    <div>      <span className="centerPages">
       <p>Say hello {name} :)</p>
       <form className="form">
 
@@ -86,6 +86,7 @@ function Form() {
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
+      </span>
     </div>
   );
 }

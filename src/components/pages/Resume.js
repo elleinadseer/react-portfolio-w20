@@ -3,6 +3,7 @@ import React from 'react';
 export default function Resume() {
   return (
     <div>
+     <span className="centerPages">
       <h1>Resume</h1>
       <p>
         <h3>Download my Resume</h3>
@@ -26,6 +27,7 @@ export default function Resume() {
         - mongoDB, mongoose <br></br>
 
       </p>
+      </span>
     </div>
   );
 }
