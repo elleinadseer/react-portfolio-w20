@@ -1,8 +1,11 @@
 import React from 'react';
-import Form from './components/Form/index';
+// import Form from './components/Form/index';
+import PortfolioContainer from "./components/PortfolioContainer";
 
-function App() {
+const App = () => <PortfolioContainer />;
+
+/* function App() {
   return <Form />;
-}
+} */
 
 export default App;
