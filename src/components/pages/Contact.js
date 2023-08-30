@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './formStyle.css';
+import '/Users/danielle/bootcamp/react-portfolio-w20/src/styles/all.css';
 
 // Here we import a helper function that will check if the email is valid
 import { validateEmail } from '../../utils/helpers';
@@ -9,6 +9,7 @@ function Form() {
   // We are also setting their initial values to an empty string
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
@@ -20,8 +21,10 @@ function Form() {
     // Based on the input type, we set the state of either email, name
     if (inputType === 'email') {
       setEmail(inputValue);
-    } else {
+    } else if (inputType === 'name') {
       setName(inputValue);
+    } else {
+      setMessage(inputValue);
     }
   };
 
@@ -40,12 +43,15 @@ function Form() {
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setName('');
     setEmail('');
+    setMessage('');
   };
 
   return (
     <div>
-      <p>Hello {name}</p>
+      <p>Say hello {name} :)</p>
       <form className="form">
+
+        Email:
         <input
           value={email}
           name="email"
@@ -53,6 +59,8 @@ function Form() {
           type="email"
           placeholder="email"
         />
+
+        Name:
         <input
           value={name}
           name="name"
@@ -60,6 +68,17 @@ function Form() {
           type="text"
           placeholder="name"
         />
+
+        Message: 
+        <input
+          value={message}
+          name="message"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="message"
+          className='message'
+        />
+
         <button type="button" onClick={handleFormSubmit}>Submit</button>
       </form>
       {errorMessage && (
