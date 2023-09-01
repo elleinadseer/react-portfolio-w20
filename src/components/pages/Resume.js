@@ -1,10 +1,10 @@
 import React from 'react';
+// resume with an example of downloading a file 
 
 export default function Resume() {
   return (
     <div>
      <span className="centerPages">
-      <h1>Resume</h1>
       <p>
         <h3>Download my <a href="cv.doc" download>Resume</a></h3>
 

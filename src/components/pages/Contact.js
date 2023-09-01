@@ -46,6 +46,7 @@ function Form() {
     setMessage('');
   };
 
+  // input sections with handleInputChange attached, message box is textarea to allow for multiple lines
   return (
     <div>      <span className="centerPages">
       <p><strong>Say Hello {name}</strong></p>

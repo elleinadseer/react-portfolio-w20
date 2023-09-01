@@ -1,4 +1,5 @@
 import React from 'react';
+// Image of my name as the header of each page
 
 export default function Header() {
   return (

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// an object with image / link / title details to simplify the upcoming map
 export default function Portfolio() {
   const projects = {
     TLDR: {
@@ -34,6 +35,7 @@ export default function Portfolio() {
     },
   };
 
+  // map of links / text to place in HTML tags
   return (
     <div>
       <div className="centerPages">
