@@ -48,7 +48,7 @@ function Form() {
 
   return (
     <div>      <span className="centerPages">
-      <p>Say hello {name} :)</p>
+      <p><strong>Say Hello {name}</strong></p>
       <form className="form">
 
         Email:
@@ -69,15 +69,16 @@ function Form() {
           placeholder="name"
         />
 
-        Message: 
-        <input
+        Message: <br></br>
+        <textarea
           value={message}
           name="message"
           onChange={handleInputChange}
-          type="text"
+          rows="4"
+          type="textarea"
           placeholder="message"
           className='message'
-        />
+        /><br></br>
 
         <button type="button" onClick={handleFormSubmit}>Submit</button>
       </form>

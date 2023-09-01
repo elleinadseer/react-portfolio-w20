@@ -6,7 +6,7 @@ export default function Resume() {
      <span className="centerPages">
       <h1>Resume</h1>
       <p>
-        <h3>Download my Resume</h3>
+        <h3>Download my <a href="cv.doc" download>Resume</a></h3>
 
         <h3>Front-end Proficiencies</h3>
 
