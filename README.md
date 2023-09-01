@@ -9,7 +9,7 @@ I have been tasked to create a portfolio using React. This will contain multiple
 Link to GitHub repo: 
 https://github.com/elleinadseer/react-portfolio-w20
 
-Link to website deployed through GitHub Pages: https://elleinadseer.github.io/react-portfolio-w20/#portfolio
+Link to website deployed through GitHub Pages: https://elleinadseer.github.io/react-portfolio-w20
 
 
 ## Development
