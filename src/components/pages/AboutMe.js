@@ -21,23 +21,9 @@ export default function AboutMe() {
         Filters: Proximity / Price / Beds / Pets / Type / Bathroom 
 
 
-        <span className="filterContainer"><span className="filterBox">
-          PROXIMITY
-        <div className="proximity-number">
-            <input
-              type="number"
-              id="proximity-input"
-              min="1"
-              max="40"
-              defaultValue="20"
-              onChange={updateProximity}
-            />
-          </div>
-          <div className="proximity-icon-container">
-          <div className="proximity-icon" id="proximity-icon">
-          </div></div>
+        <span className="filterContainer">
 
-        </span><span className="filterBox">
+        <span className="filterBox">
           PRICE
           <p className="priceSym">£££</p>
         </span> 
