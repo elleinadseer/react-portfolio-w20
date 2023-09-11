@@ -1,18 +1,68 @@
 import React from 'react';
-// Contains a picture of myself and a bio
+
+function updateProximity() {
+  const proximityValue = document.getElementById('proximity-input').value;
+  const proximityIcon = document.getElementById('proximity-icon');
+
+  const newSize = Math.min(100, proximityValue) + 'px';
+  proximityIcon.style.width = newSize;
+  proximityIcon.style.height = newSize;
+}
 
 export default function AboutMe() {
   return (
     <div>
       <span className="centerPages">
-      <img src="https://ca.slack-edge.com/T04P9RC3478-U05020HSTDZ-f550b8edf43d-48" alt="me"/>
+        Are you seeking to rent or buy?
+        <span className="inline">
+          <button className="rent">Rent</button>
+          <button className="buy">Buy</button>
+        </span>
+        Filters: Proximity / Price / Beds / Pets / Type / Bathroom 
 
-      <p>
-      Hi, I'm Danielle – a junior web dev with a heart set on becoming a full-stack developer. My journey in the realm of technology is fueled by an unwavering passion for web design and a boundless curiosity about the digital world's potential for meaningful communication.<br></br><br></br>
 
-My fascination with the intricate code that powers the internet led me to aspire to be a full-stack developer. From the front-end's visual allure to the back-end's intricate mechanics, I'm committed to mastering every layer of this digital landscape. I'm continuously learning, adapting, and embracing emerging technologies to stay ahead in this ever-evolving field.<br></br><br></br>
+        <span className="filterContainer"><span className="filterBox">
+          PROXIMITY
+        <div className="proximity-number">
+            <input
+              type="number"
+              id="proximity-input"
+              min="1"
+              max="40"
+              defaultValue="20"
+              onChange={updateProximity}
+            />
+          </div>
+          <div className="proximity-icon-container">
+          <div className="proximity-icon" id="proximity-icon">
+          </div></div>
 
-My other hobbies include gaming and pro wrestling! I'm generally very interested in story telling and I hope to incorporate my love of writing and the skills gained from my English Literature degree into designing websites that are easily understood and enjoyed by others. </p>
+        </span><span className="filterBox">
+          PRICE
+          <p className="priceSym">£££</p>
+        </span> 
+
+        <span className="filterBox">
+          BEDS
+        <img src="https://imgur.com/bvlccTM.png" height="80" width="80" alt="bed"></img>
+        </span>
+
+        <span className="filterBox">
+          TYPE
+        <img src="https://i.imgur.com/TIlKLdj.png" height="80" width="80" alt="property type"></img>
+        </span>
+
+        <span className="filterBox">
+          BATHROOMS
+        <img src="https://i.imgur.com/J23J5au.png" height="80" width="80" alt="bathrooms"></img>
+        </span>
+
+        <span className="filterBox">
+          PETS
+        <img src="https://i.imgur.com/bvR5Faw.png" height="80" width="80" alt="paw"></img>
+        </span>
+        
+        </span>
       </span>
     </div>
   );

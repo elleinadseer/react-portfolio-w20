@@ -6,6 +6,7 @@ import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import MapContainer from '/Users/danielle/bootcamp/react-portfolio-w20/src/components/MapContainer.js';
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('AboutMe');
@@ -25,15 +26,15 @@ export default function PortfolioContainer() {
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
+  // <MapContainer />
+  //       <Footer/>
 
   return (
     <div>
       {/* We are passing the currentPage from state and the function to update it */}
       <Header/>
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* Here we are calling the renderPage method which will return a component  */}
-      {renderPage()}
-      <Footer/>
+      <AboutMe/>
+      <MapContainer/>
     </div>
   );
 }
